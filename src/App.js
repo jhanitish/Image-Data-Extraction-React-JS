@@ -88,19 +88,21 @@ export default function App() {
         onChange={handleChange}
       />
       <br />
-      {Object.keys(imgData).length > 0 ? (
-        <table style={{ width: "500px" }}>
-          <thead>
-            <tr>
-              <th>Data</th>
-              <th>Value</th>
-            </tr>
-          </thead>
-          <tbody>{renderData()}</tbody>
-        </table>
-      ) : (
-        ""
-      )}
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        {Object.keys(imgData).length > 0 ? (
+          <table style={{ width: "500px" }}>
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody>{renderData()}</tbody>
+          </table>
+        ) : (
+          ""
+        )}
+      </div>
     </>
   );
 }
